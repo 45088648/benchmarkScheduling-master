@@ -1,0 +1,90 @@
+%\documentclass[a4paper,twocolumn]{article} % Document type
+
+\documentclass[a4paper,12pt,oneside,onecolumn]{article} % Document type
+
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
+
+\ifx\pdfoutput\undefined
+    %Use old Latex if PDFLatex does not work
+   \usepackage[dvips]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.eps} % Encapsulated PostScript
+ \else
+    %Use PDFLatex
+   \usepackage[pdftex]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.pdf,.jpg,.png,.mps} % Portable Document Format, Joint Photographic Experts Group, Portable Network Graphics, MetaPost
+   \pdfcompresslevel=9
+\fi
+
+\usepackage{amsmath,amssymb}   % Contains mathematical symbols
+\usepackage[ansinew]{inputenc} % Input encoding, identical to Windows 1252
+\usepackage[english]{babel}    % Language
+\usepackage[square,numbers]{natbib}     %Nice numbered citations
+\bibliographystyle{plainnat}            %Sorted bibliography
+
+
+
+\begin{document}               % Begins the document
+
+\title{Paperwork on Degree Project: Machine Learning Based Fault Prediction for Real-time Scheduling on Shop-floor}
+\author{
+  First Name 1 Last Name 1 \\ Personal Number 1 \\ E-mail 1 
+  \and 
+  First Name 2 Last Name 2 \\ Personal Number 2 \\ E-mail 2
+  }
+%\date{2010-10-10}             % If you want to set the date yourself.
+
+\maketitle                     % Generates the title
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructions regarding the report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Ensemble Learning}
+Ensemble learning is the process by which multiple models, such as classifiers or experts, are strategically generated and combined to solve a particular computational intelligence problem. Ensemble learning is primarily used to improve the (classification, prediction, function approximation, etc.) performance of a model, or reduce the likelihood of an unfortunate selection of a poor one. Other applications of ensemble learning include assigning a confidence to the decision made by the model, selecting optimal (or near optimal) features, data fusion, incremental learning, nonstationary learning and error-correcting. (Robi Polikar (2009) Ensemble learning. Scholarpedia, 4(1):2776.)[1]
+\\
+Kunwar P. Singh et al. developed tree ensemble models for seasonal discrimination and air quality prediction and found that their models outperforms SVMs(Atmospheric Environment)[2]. Anders Elowsson and Anders Friberg used ensemble learning model to predict performed dynamics of music audio and found the result well above that of individual human listeners(The Journal of the Acoustical Society of America 141, 2224 (2017))[3]. Kunwar P. Sing and Shikha Gupta used a few simple non-quantum mechanical molecular descriptors as an ensemble classifier to discriminate toxic and non-toxic chemicals and predict toxicity of chemicals in multi-species(Toxicology and Applied Pharmacology)[4]. Jinrong Bai and Junfeng Wang developed a multi-view ensemble learning model to improve malware detection and successfully reduced false alarm rate(Security and Communication Networks)[5].
+\section*{Overview}
+
+
+
+\section*{Algorithm Details}
+Overall, medium computation time, high model complexity. Capable of learning complex patterns. Tricky model choice.\\
+Step 1:\\
+...\\
+Step n:
+equations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{Bibliography_template} %Read the bibliography from a separate file
+
+\begin{thebibliography}{99}
+\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
+Hassan~K Khalil.
+\newblock \emph{Nonlinear systems}.
+\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
+\newblock ISBN 0-13-067389-7.
+
+\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
+  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
+Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
+\newblock \emph{The Not So Short Introduction to \LaTeXe}.
+\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
+  2008.
+\newblock http://www.ctan.org/info/lshort/.
+
+\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
+ontrol:xr}
+Shankar Sastry.
+\newblock \emph{Nonlinear systems: analysis, stability, and control},
+  volume~10.
+\newblock Springer, New York, N.Y., 1999.
+\newblock ISBN 0-387-98513-1.
+\end{thebibliography}
+
+
+\end{document}      % End of the document

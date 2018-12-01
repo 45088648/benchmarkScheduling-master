@@ -1,0 +1,88 @@
+%\documentclass[a4paper,twocolumn]{article} % Document type
+
+\documentclass[a4paper,12pt,oneside,onecolumn]{article} % Document type
+
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
+
+\ifx\pdfoutput\undefined
+    %Use old Latex if PDFLatex does not work
+   \usepackage[dvips]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.eps} % Encapsulated PostScript
+ \else
+    %Use PDFLatex
+   \usepackage[pdftex]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.pdf,.jpg,.png,.mps} % Portable Document Format, Joint Photographic Experts Group, Portable Network Graphics, MetaPost
+   \pdfcompresslevel=9
+\fi
+
+\usepackage{amsmath,amssymb}   % Contains mathematical symbols
+\usepackage[ansinew]{inputenc} % Input encoding, identical to Windows 1252
+\usepackage[english]{babel}    % Language
+\usepackage[square,numbers]{natbib}     %Nice numbered citations
+\bibliographystyle{plainnat}            %Sorted bibliography
+
+
+
+\begin{document}               % Begins the document
+
+\title{Paperwork on Degree Project: Machine Learning Based Fault Prediction for Real-time Scheduling on Shop-floor}
+\author{
+  First Name 1 Last Name 1 \\ Personal Number 1 \\ E-mail 1 
+  \and 
+  First Name 2 Last Name 2 \\ Personal Number 2 \\ E-mail 2
+  }
+%\date{2010-10-10}             % If you want to set the date yourself.
+
+\maketitle                     % Generates the title
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructions regarding the report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Naive Bayes Classifier}
+
+\section*{Overview}
+Speaking of probabilistic classifier in machine learning, it is natural to think of naive Bayes classifiers, a group of simple classifiers developed by using Bayes' theorem under assumptions of strong independence between the features. Since early 1950s, naive Bayes has been extensively studied in various fields including text categorization, automatic diagnostics ect. For example, Satyendr Singh et al. developed a naive Bayes classifier for Hindi word disambiguation (Proceedings of the 7th ACM India Computing Conference)[1], Rong Zhen et al. combined vessel trajectory clustering technique with naive Bayes classifier for maritime anomaly detection(Journal of Navigation)[2] and even developmental toxicity assessment, performed by Hui Zhang et al. (Reproductive Toxicology)[3]. Other than using the naive Bayes method to solve different problems, researches were conducted to improve the method itself as well. For example, Kalyan Netti and Y Radhika proposed a novel method to minimizing accuracy loss brought by assumption of independence in naive Bayes classifier(2015 IEEE International Conference on Computational Intelligence and Computing Research (ICCIC))[4]. Zhiyong Yan, Congfu Xu and Yunhe Pan from Zhejiang University improved naive bayes classifier by dividing its decision regions. Moreover, Paraskevas Tsangaratos and Ioanna Ilia performed comparison logistic regression and naive bayes classifier in landslide susceptibility assessment and formed the conclusion that naive bayes classifier outperforms logistic regression(Catena)[5].
+
+
+\section*{Algorithm Details}
+Overall, short computation time(linear time), small amount of training data works.
+Step 1:\\
+...\\
+Step n:
+equations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{Bibliography_template} %Read the bibliography from a separate file
+
+\begin{thebibliography}{99}
+\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
+Hassan~K Khalil.
+\newblock \emph{Nonlinear systems}.
+\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
+\newblock ISBN 0-13-067389-7.
+
+\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
+  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
+Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
+\newblock \emph{The Not So Short Introduction to \LaTeXe}.
+\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
+  2008.
+\newblock http://www.ctan.org/info/lshort/.
+
+\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
+ontrol:xr}
+Shankar Sastry.
+\newblock \emph{Nonlinear systems: analysis, stability, and control},
+  volume~10.
+\newblock Springer, New York, N.Y., 1999.
+\newblock ISBN 0-387-98513-1.
+\end{thebibliography}
+
+
+\end{document}      % End of the document

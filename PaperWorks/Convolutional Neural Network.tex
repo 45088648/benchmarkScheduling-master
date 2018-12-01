@@ -1,0 +1,89 @@
+%\documentclass[a4paper,twocolumn]{article} % Document type
+
+\documentclass[a4paper,12pt,oneside,onecolumn]{article} % Document type
+
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
+
+\ifx\pdfoutput\undefined
+    %Use old Latex if PDFLatex does not work
+   \usepackage[dvips]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.eps} % Encapsulated PostScript
+ \else
+    %Use PDFLatex
+   \usepackage[pdftex]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.pdf,.jpg,.png,.mps} % Portable Document Format, Joint Photographic Experts Group, Portable Network Graphics, MetaPost
+   \pdfcompresslevel=9
+\fi
+
+\usepackage{amsmath,amssymb}   % Contains mathematical symbols
+\usepackage[ansinew]{inputenc} % Input encoding, identical to Windows 1252
+\usepackage[english]{babel}    % Language
+\usepackage[square,numbers]{natbib}     %Nice numbered citations
+\bibliographystyle{plainnat}            %Sorted bibliography
+
+
+
+\begin{document}               % Begins the document
+
+\title{Paperwork on Degree Project: Machine Learning Based Fault Prediction for Real-time Scheduling on Shop-floor}
+\author{
+  First Name 1 Last Name 1 \\ Personal Number 1 \\ E-mail 1 
+  \and 
+  First Name 2 Last Name 2 \\ Personal Number 2 \\ E-mail 2
+  }
+%\date{2010-10-10}             % If you want to set the date yourself.
+
+\maketitle                     % Generates the title
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructions regarding the report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Convolutional Neural Network}
+
+\section*{Overview}
+
+Convolutional neural network(CNN) is a class of deep feed-forward artificial neural network. A convolutional neural network is comprised of one or more convolutional layers (often with a sub-sampling step) and then followed by one or more fully connected layers as in a standard artificial neural network. The architecture of a CNN is designed to take advantage of the 2D structure of an input image (or other 2D input such as a speech signal). This is achieved with local connections and tied weights followed by some form of pooling which results in translation invariant features. Another benefit of CNNs is that they are easier to train and have many fewer parameters than fully connected networks with the same number of hidden units.\\
+Along with the development of GPU computation and other supporting techniques, CNN has achieved significant result on image recognition, video analysis, natural language processing and other fields. More and more researchers are focusing on CNNs now. Wenqin Sun et al. developed an enhanced deep CNN for breast cancer diagnosis(Computerized Medical Imaging and Graphics)[1]. Mehdi Hajinoroozi et al. used deep CNN to predict driver cognitive performance with EEG data(Signal Processing: Image Communication)[2]. Yuanyuan Zhang et al. developed an adaptive CNN and explored its performance on face recognition(Neural Processing Letters)[3]. Hugo Alberto Perlin et al. used CNN as an approach to extract multiple human attributes from image(Pattern Recognition Letters)[4].Oliver Janssens et al. used CNN for fault detection on rotating machinery(Journal of Sound and Vibration)[5]. 
+
+\section*{Algorithm Details}
+Overall, long computation time, high model complexity, require large amount of training data. Capable of learning complex patterns. \\
+Step 1:\\
+...\\
+Step n:
+equations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{Bibliography_template} %Read the bibliography from a separate file
+
+\begin{thebibliography}{99}
+\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
+Hassan~K Khalil.
+\newblock \emph{Nonlinear systems}.
+\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
+\newblock ISBN 0-13-067389-7.
+
+\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
+  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
+Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
+\newblock \emph{The Not So Short Introduction to \LaTeXe}.
+\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
+  2008.
+\newblock http://www.ctan.org/info/lshort/.
+
+\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
+ontrol:xr}
+Shankar Sastry.
+\newblock \emph{Nonlinear systems: analysis, stability, and control},
+  volume~10.
+\newblock Springer, New York, N.Y., 1999.
+\newblock ISBN 0-387-98513-1.
+\end{thebibliography}
+
+
+\end{document}      % End of the document

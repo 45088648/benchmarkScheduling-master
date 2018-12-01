@@ -1,0 +1,89 @@
+%\documentclass[a4paper,twocolumn]{article} % Document type
+
+\documentclass[a4paper,12pt,oneside,onecolumn]{article} % Document type
+
+\usepackage[left=1.0in, right=1.0in, top=1.0in, bottom=1.0in]{geometry}
+
+\ifx\pdfoutput\undefined
+    %Use old Latex if PDFLatex does not work
+   \usepackage[dvips]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.eps} % Encapsulated PostScript
+ \else
+    %Use PDFLatex
+   \usepackage[pdftex]{graphicx}% To get graphics working
+   \DeclareGraphicsExtensions{.pdf,.jpg,.png,.mps} % Portable Document Format, Joint Photographic Experts Group, Portable Network Graphics, MetaPost
+   \pdfcompresslevel=9
+\fi
+
+\usepackage{amsmath,amssymb}   % Contains mathematical symbols
+\usepackage[ansinew]{inputenc} % Input encoding, identical to Windows 1252
+\usepackage[english]{babel}    % Language
+\usepackage[square,numbers]{natbib}     %Nice numbered citations
+\bibliographystyle{plainnat}            %Sorted bibliography
+
+
+
+\begin{document}               % Begins the document
+
+\title{Paperwork on Degree Project: Machine Learning Based Fault Prediction for Real-time Scheduling on Shop-floor}
+\author{
+  First Name 1 Last Name 1 \\ Personal Number 1 \\ E-mail 1 
+  \and 
+  First Name 2 Last Name 2 \\ Personal Number 2 \\ E-mail 2
+  }
+%\date{2010-10-10}             % If you want to set the date yourself.
+
+\maketitle                     % Generates the title
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Instructions regarding the report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section*{Stacked Auto-encoders}
+
+\section*{Overview}
+A stacked auto-encoder is a neural network consisting of multiple layers of sparse auto-encoders in which the outputs of each layer is wired to the inputs of the successive layer. Stacked autoencoders take advantage of the greedy layerwise approach for pretraining a deep network by training each layer in turn. To do this, first train the first layer on raw input to obtain parameters of weights and biases. Use the first layer to transform the raw input into a vector consisting of activation of the hidden units. Train the second layer on this vector to obtain parameters of weights and biases.Repeat for subsequent layers, using the output of each layer as input for the subsequent layer.\\
+This method trains the parameters of each layer individually while freezing parameters for the remainder of the model. To produce better results, after this phase of training is complete, fine-tuning using back propagation can be used to improve the results by tuning the parameters of all layers are changed at the same time.
+\\
+Dal Xi Wu et al. constructed  a stacked denoising auto-encoder architecture with adaptive learning rate for action recognition based on skeleton features and found their results with better robustness and accuracy than that of classic machine learning models including SVM, REFTrees, Linear Regression, RBF Network and Deep Belief Network(Applied Mechanics and Materials)[1]. Heung-Il Suk et al. used stacked auto-encoders for diagnosis of Alzheimer's disease and its prodromal stage mild cognitive impairment(Brain Structure and Function)[2]. Earnest Paul Ijjina and Krishna Mohan C built a stacked auto-encoder for human actions classification using pose based features(Pattern Recognition Letters)[3]. 
+\section*{Algorithm Details}
+Overall, medium computation time, require large amount of training data. Capable of learning complex patterns. 
+Step 1:\\
+...\\
+Step n:
+equations
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The bibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\bibliography{Bibliography_template} %Read the bibliography from a separate file
+
+\begin{thebibliography}{99}
+\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
+Hassan~K Khalil.
+\newblock \emph{Nonlinear systems}.
+\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
+\newblock ISBN 0-13-067389-7.
+
+\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
+  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
+Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
+\newblock \emph{The Not So Short Introduction to \LaTeXe}.
+\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
+  2008.
+\newblock http://www.ctan.org/info/lshort/.
+
+\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
+ontrol:xr}
+Shankar Sastry.
+\newblock \emph{Nonlinear systems: analysis, stability, and control},
+  volume~10.
+\newblock Springer, New York, N.Y., 1999.
+\newblock ISBN 0-387-98513-1.
+\end{thebibliography}
+
+
+\end{document}      % End of the document
